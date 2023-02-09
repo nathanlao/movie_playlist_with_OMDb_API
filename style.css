@@ -7,3 +7,9 @@ body {
     margin: 0;
     padding: 0;
 }
+
+body {
+    border:2px solid red;
+    width: 800px;
+    margin: 0 auto;
+}
