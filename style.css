@@ -13,7 +13,7 @@ body {
     border: 1px solid lightgray;
     width: 700px;
     /* height stretch to full viewport */
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0 auto;
 }
 
@@ -92,6 +92,7 @@ body {
     padding: 9px 13px;
     text-indent: 30px;
     border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     outline: none;
 }
 
@@ -106,13 +107,16 @@ body {
 
 /* main */
 
-.start-exploring {
-    height: 550px;
+.movie-list {
+    /* height: 550px; */
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
     justify-content: center;
 }
 
 .start-exploring img {
+    /* display: none; */
     width: 20%;
 }
