@@ -106,7 +106,7 @@ body {
 
 /* main */
 
-.start-exploring {
+.movie-list {
     height: 550px;
     display: flex;
     align-items: center;
@@ -114,5 +114,6 @@ body {
 }
 
 .start-exploring img {
+    /* display: none; */
     width: 20%;
 }
