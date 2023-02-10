@@ -95,28 +95,32 @@ submitForm.addEventListener("submit", (e) => {
             movieIdArray = dataArray.map((movie) => movie.imdbID)
             console.log(movieIdArray)
 
-            movieLists.innerHTML = ""
-            // Fetch movie according to each movie imdbID
-            movieIdArray.forEach(movieId => {
-                fetch(`http://www.omdbapi.com/?apikey=464807e&i=${movieId}`)
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data)
-
-                        let movieHtml = ""
-                        movieHtml += `
-                            <div>
-                                <img alt="movie poster" src=${data.Poster}/>
-                                <h4>${data.Title}</h4>
-                                <i class="fa-solid fa-star"></i>
-                                <h4>${data.imdbRating}</h4>
-                                <h4>${data.Runtime}</h4>
-                                <h4>${data.Genre}</h4>
-                                <p>${data.Plot}</p>
-                            </div>
-                        `
-                        movieLists.innerHTML += movieHtml
-                    })
-            })
+            renderMovieLists(movieIdArray)
         })
 })
+
+function renderMovieLists(movieIdArray) {
+    movieLists.innerHTML = ""
+    // Fetch movie according to each movie imdbID
+    movieIdArray.forEach(movieId => {
+        fetch(`http://www.omdbapi.com/?apikey=464807e&i=${movieId}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+    
+                let movieHtml = ""
+                movieHtml += `
+                    <div>
+                        <img alt="movie poster" src="${data.Poster === "N/A" ? "./images/imageNotFound.png" : data.Poster}"/>
+                        <h4>${data.Title}</h4>
+                        <i class="fa-solid fa-star"></i>
+                        <h4>${data.imdbRating}</h4>
+                        <h4>${data.Runtime}</h4>
+                        <h4>${data.Genre}</h4>
+                        <p>${data.Plot}</p>
+                    </div>
+                `
+                movieLists.innerHTML += movieHtml
+            })
+    })
+}
