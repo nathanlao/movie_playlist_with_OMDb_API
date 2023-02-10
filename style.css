@@ -10,7 +10,7 @@ body {
 }
 
 body {
-    border:2px solid red;
+    border: 1px solid lightgray;
     width: 700px;
     /* height stretch to full viewport */
     height: 100vh;
