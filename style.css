@@ -12,8 +12,12 @@ body {
 body {
     border:2px solid red;
     width: 700px;
+    /* height stretch to full viewport */
+    height: 100vh;
     margin: 0 auto;
 }
+
+/* header */
 
 .header {
     height: 208px;
@@ -97,4 +101,17 @@ body {
     cursor: pointer;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+/* main */
+
+.start-exploring {
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-exploring img {
+    width: 20%;
 }
