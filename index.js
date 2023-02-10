@@ -35,18 +35,22 @@ submitForm.addEventListener("submit", (e) => {
             movieIdArray = dataArray.map((movie) => movie.imdbID)
             console.log(movieIdArray)
 
+            movieLists.innerHTML = ""
             // Fetch movie according to each movie imdbID
             movieIdArray.forEach(movieId => {
                 fetch(`http://www.omdbapi.com/?apikey=464807e&i=${movieId}`)
                     .then(res => res.json())
-                    .then(data => console.log(data))
-            })
-            
+                    .then(data => {
+                        console.log(data)
 
-            let movieHtml = ""
-            movieHtml += `
-                <img alt="movie poster" src=${data.Search[0].Poster}/>
-            `
-            movieLists.innerHTML = movieHtml
+                        let movieHtml = ""
+                        movieHtml += `
+                            <div>
+                                <img alt="movie poster" src=${data.Poster}/>
+                            </div>
+                        `
+                        movieLists.innerHTML += movieHtml
+                    })
+            })
         })
 })
