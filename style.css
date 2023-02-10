@@ -28,6 +28,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    position: relative;
 }
 
 .header-find,
@@ -44,4 +46,40 @@ body {
 .header-watchlist {
     font-size: 14px;
     font-weight: 700;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    
+    position: absolute;
+    width: 530px;
+    top: 185px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+}
+
+.search-input,
+.search-btn {
+    border: none;
+    border-radius: 6px;
+}
+
+.search-input {
+    font-family: inherit;
+    width: 100%;
+    border-top-right-radius: 0;
+}
+
+.search-btn {
+    font-family: inherit;
+    font-weight: 500;
+    padding: 0 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
