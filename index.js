@@ -110,14 +110,28 @@ function renderMovieLists(movieIdArray) {
     
                 let movieHtml = ""
                 movieHtml += `
-                    <div>
-                        <img alt="movie poster" src="${data.Poster === "N/A" ? "./images/imageNotFound.png" : data.Poster}"/>
-                        <h4>${data.Title}</h4>
-                        <i class="fa-solid fa-star"></i>
-                        <h4>${data.imdbRating}</h4>
-                        <h4>${data.Runtime}</h4>
-                        <h4>${data.Genre}</h4>
-                        <p>${data.Plot}</p>
+                    <div class="movie">
+                        <img 
+                            class="movie-poster"
+                            alt="movie poster" 
+                            src="${data.Poster === "N/A" ? "./images/imageNotFound.png" : data.Poster}"
+                        />
+                        <div class="movie-content-wrapper">
+                            <header class="movie-header flex">
+                                <h4 class="movie-title">${data.Title}</h4>
+                                <div class="movie-rating-wrapper flex">
+                                    <span class="icon-star">
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <h4 class="movie-rating">${data.imdbRating}</h4>
+                                </div>
+                            </header>
+                            <section class="flex">
+                                <h4>${data.Runtime}</h4>
+                                <h4>${data.Genre}</h4>
+                            </section>
+                            <p>${data.Plot}</p>
+                        </div>
                     </div>
                 `
                 movieLists.innerHTML += movieHtml

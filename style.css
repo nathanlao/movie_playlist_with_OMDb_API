@@ -111,8 +111,7 @@ body {
     /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    align-items: flex-start;
     /* justify-content: center; */
 }
 
@@ -123,4 +122,58 @@ body {
 .start-exploring img {
     /* display: none; */
     width: 100%;
+}
+
+.movie {
+    border: 2px solid red;
+    /* min width to stretch flex childern to full width of containter */
+    /* min-width: 600px; */
+    margin: 44px 80px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.movie-poster {
+    width: 100px;
+    height: 150px;
+}
+
+.movie-content-wrapper {
+    border: 2px solid blue;
+    /* min-width: 550px; */
+
+}
+
+.movie-header {
+    align-items: center;
+}
+
+.movie-title {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+}
+
+.icon-star i {
+    font-size: 18px;
+    color: #FEC654;
+}
+
+.movie-rating-wrapper {
+    margin-left: auto;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.movie-rating {
+    /* margin: 0 10px 0 0; */
+    font-size: 18px;
+    font-weight: 400;
+    color: #111827;
+}
+
+/* Ulitity */
+.flex {
+    display: flex;
 }
