@@ -141,8 +141,7 @@ body {
 
 .movie-content-wrapper {
     border: 2px solid blue;
-    /* min-width: 550px; */
-
+    min-width: 414px;
 }
 
 /* .movie-header {
