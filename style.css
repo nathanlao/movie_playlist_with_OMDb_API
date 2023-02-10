@@ -12,8 +12,8 @@ body {
 body {
     border: 1px solid lightgray;
     width: 700px;
-    /* height stretch to full viewport */
-    /* height: 100vh; */
+    /* min height stretch to full viewport */
+    min-height: 100vh;
     margin: 0 auto;
 }
 
@@ -68,7 +68,6 @@ body {
 }
 
 .icon {
-    /* margin-right: 10px; */
     position: absolute;
     top: 0;
     left: 0;
@@ -108,15 +107,20 @@ body {
 /* main */
 
 .movie-list {
-    /* height: 550px; */
+    min-height: 100vh;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+}
+
+.start-exploring {
+    margin: 200px 0;
 }
 
 .start-exploring img {
     /* display: none; */
-    width: 20%;
+    width: 100%;
 }
