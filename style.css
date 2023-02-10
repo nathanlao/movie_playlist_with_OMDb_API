@@ -16,7 +16,6 @@ body {
 }
 
 .header {
-    border: 2px solid blue;
     height: 208px;
     background: linear-gradient(rgba(0, 0, 0, 0.4),
               rgba(0, 0, 0, 0.4)),
@@ -64,6 +63,19 @@ body {
     border-radius: 7px;
 }
 
+.icon {
+    /* margin-right: 10px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.icon i {
+    font-size: 20px;
+    color: lightgray;
+    margin: 10px;
+}
+
 .search-input,
 .search-btn {
     border: none;
@@ -73,6 +85,8 @@ body {
 .search-input {
     font-family: inherit;
     width: 100%;
+    padding: 9px 13px;
+    text-indent: 30px;
     border-top-right-radius: 0;
 }
 
@@ -80,6 +94,7 @@ body {
     font-family: inherit;
     font-weight: 500;
     padding: 0 30px;
+    cursor: pointer;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }

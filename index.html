@@ -9,6 +9,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" 
         rel="stylesheet">
+        <!-- CDN font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- CSS -->
         <link rel="stylesheet" href="style.css">
         <title>Cinema Craze</title>
@@ -19,7 +22,10 @@
                 <h1 class="header-find">Find your film</h1>
                 <h3 class="header-watchlist">My Watchlist</h3>
                 <form class="search">
-                    <input class="search-input" type="text">
+                    <span class="icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input class="search-input" type="text" placeholder="Search for a movie">
                     <button class="search-btn">Search</button>
                 </form>
             </div>
