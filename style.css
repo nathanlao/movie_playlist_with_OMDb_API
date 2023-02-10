@@ -145,9 +145,10 @@ body {
 
 }
 
-.movie-header {
-    align-items: center;
-}
+/* .movie-header {
+    align-items: flex-start;
+    justify-content: space-between;
+} */
 
 .movie-title {
     font-weight: 500;
@@ -167,7 +168,7 @@ body {
 }
 
 .movie-rating {
-    /* margin: 0 10px 0 0; */
+    margin: 0;
     font-size: 18px;
     font-weight: 400;
     color: #111827;

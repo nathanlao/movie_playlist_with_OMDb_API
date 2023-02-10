@@ -117,7 +117,7 @@ function renderMovieLists(movieIdArray) {
                             src="${data.Poster === "N/A" ? "./images/imageNotFound.png" : data.Poster}"
                         />
                         <div class="movie-content-wrapper">
-                            <header class="movie-header flex">
+                            <header class="flex">
                                 <h4 class="movie-title">${data.Title}</h4>
                                 <div class="movie-rating-wrapper flex">
                                     <span class="icon-star">
