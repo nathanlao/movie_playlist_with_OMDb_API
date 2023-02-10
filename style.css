@@ -92,6 +92,7 @@ body {
     padding: 9px 13px;
     text-indent: 30px;
     border-top-right-radius: 0;
+    outline: none;
 }
 
 .search-btn {
