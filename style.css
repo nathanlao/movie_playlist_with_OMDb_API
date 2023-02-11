@@ -12,8 +12,8 @@ body {
 body {
     border: 1px solid lightgray;
     width: 700px;
-    /* height stretch to full viewport */
-    /* height: 100vh; */
+    /* min height stretch to full viewport */
+    min-height: 100vh;
     margin: 0 auto;
 }
 
@@ -68,7 +68,6 @@ body {
 }
 
 .icon {
-    /* margin-right: 10px; */
     position: absolute;
     top: 0;
     left: 0;
@@ -105,18 +104,100 @@ body {
     border-bottom-left-radius: 0;
 }
 
+.search-btn:hover {
+    background-color: #dee2e6;
+}
+
 /* main */
 
 .movie-list {
-    /* height: 550px; */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+}
+
+.start-exploring {
+    margin: 200px auto;
 }
 
 .start-exploring img {
     /* display: none; */
+    width: 100%;
+}
+
+.movie {
+    box-shadow: 0 0 8px 0.2px grey;
+    transition: all 0.3s ease-in;
+    /* min width to stretch flex childern to full width of containter */
+    /* min-width: 600px; */
+    margin: 21px 80px 0;
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.movie:hover{
+    transform: scale(1.1);
+}
+
+.movie:nth-of-type(1) {
+    margin-top: 44px;
+}
+
+.movie-poster {
     width: 20%;
+    align-self: stretch;
+}
+
+.movie-content-wrapper {
+    min-width: 414px;
+    padding: 15px;
+}
+
+.movie-title {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+    color: #212529;
+}
+
+.icon-star i {
+    font-size: 18px;
+    color: #FEC654;
+}
+
+.movie-rating-wrapper {
+    margin-left: auto;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.movie-rating {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #212529;
+}
+
+.movie-details {
+    gap: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #212529;
+}
+
+.movie-details p {
+    margin: 11px 0 0;
+}
+
+.movie-plot {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6B7280;
+}
+
+/* Ulitity */
+.flex {
+    display: flex;
 }
