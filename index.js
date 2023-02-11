@@ -69,6 +69,7 @@ function renderMovieLists(movieIdArray) {
                                 <p>${data.Genre}</p>
                                 <button 
                                     class="add-watchlist"
+                                    id="add-${data.imdbID}"
                                     onclick="addToWatchList('${data.imdbID}')"
                                 >
                                     <i class="fa-solid fa-circle-plus"></i>
@@ -92,6 +93,14 @@ function addToWatchList(movieId) {
     
     localStorage.setItem("myWatchList", JSON.stringify(movieWatchList))
     console.log(movieWatchList)
+
+    // Change the icon if button is clicked
+    const movieBtnEl = document.getElementById(`add-${movieId}`)
+    movieBtnEl.innerHTML = `
+            <i class="fa-solid fa-check"></i>
+            watchlist
+        `
+
 }
 
 // localStorage.clear()
