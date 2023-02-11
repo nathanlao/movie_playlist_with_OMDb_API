@@ -10,7 +10,7 @@ body {
 }
 
 body {
-    /* border: 1px solid lightgray; */
+    background-color: #f8f9fa;
     width: 700px;
     /* min height stretch to full viewport */
     min-height: 100vh;
