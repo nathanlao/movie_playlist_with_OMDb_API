@@ -65,6 +65,10 @@ function renderMovieLists(movieIdArray) {
                             <section class="movie-details flex">
                                 <p>${data.Runtime}</p>
                                 <p>${data.Genre}</p>
+                                <button class="add-watchlist">
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                    Watchlist
+                                </button>
                             </section>
                             <p class="movie-plot">${data.Plot}</p>
                         </div>
