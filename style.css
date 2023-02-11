@@ -135,8 +135,8 @@ body {
 }
 
 .movie-poster {
-    width: 150px;
-    height: 200px;
+    width: 100px;
+    height: 150px;
 }
 
 .movie-content-wrapper {
@@ -183,6 +183,12 @@ body {
 
 .movie-details p {
     margin: 11px 0 0;
+}
+
+.movie-plot {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6B7280;
 }
 
 /* Ulitity */

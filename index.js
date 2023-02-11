@@ -130,7 +130,7 @@ function renderMovieLists(movieIdArray) {
                                 <p>${data.Runtime}</p>
                                 <p>${data.Genre}</p>
                             </section>
-                            <p>${data.Plot}</p>
+                            <p class="movie-plot">${data.Plot}</p>
                         </div>
                     </div>
                 `
