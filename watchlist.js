@@ -7,7 +7,7 @@ function renderMovieLists(movieIdArray) {
     watchlist.innerHTML = ""
     // Fetch movie according to each movie imdbID
     movieIdArray.forEach(async movieId => {
-        const response = await fetch(`http://www.omdbapi.com/?apikey=464807e&i=${movieId}`)
+        const response = await fetch(`https://www.omdbapi.com/?apikey=464807e&i=${movieId}`)
         const data = await response.json()
     
         let movieHtml = ""

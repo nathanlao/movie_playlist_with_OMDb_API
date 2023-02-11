@@ -12,7 +12,7 @@ async function searchByMovieTitle(event) {
     const movieTitle = searchInputEl.value
 
     try {
-        const response = await fetch(`http://www.omdbapi.com/?apikey=464807e&s=${movieTitle}`)
+        const response = await fetch(`https://www.omdbapi.com/?apikey=464807e&s=${movieTitle}`)
         const data = await response.json()    
     
         // data array fetch from API
@@ -40,7 +40,7 @@ function renderMovieLists(movieIdArray) {
 
     // Fetch movie according to each movie imdbID
     movieIdArray.forEach(async movieId => {
-        const response = await fetch(`http://www.omdbapi.com/?apikey=464807e&i=${movieId}`)
+        const response = await fetch(`https://www.omdbapi.com/?apikey=464807e&i=${movieId}`)
         const data = await response.json()
 
         // Check if movieId is aleady in LS
