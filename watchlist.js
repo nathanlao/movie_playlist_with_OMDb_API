@@ -1,7 +1,7 @@
 const watchlist = document.getElementById("movie-list")
 
 // Get watchlist array from localStorage
-let watchlistFromLS = JSON.parse(localStorage.getItem("myWatchList"))
+let watchlistFromLS = JSON.parse(localStorage.getItem("myWatchList")) || []
 
 function renderMovieLists(movieIdArray) {
     watchlist.innerHTML = ""
@@ -36,7 +36,7 @@ function renderMovieLists(movieIdArray) {
                                 <button 
                                     class="add-watchlist"
                                     id="add-${data.imdbID}"
-                                    onclick="addToWatchList('${data.imdbID}')"
+                                    onclick="removeFromWatchList('${data.imdbID}')"
                                 >
                                     <i class="fa-solid fa-circle-minus"></i>
                                     Remove
@@ -49,6 +49,15 @@ function renderMovieLists(movieIdArray) {
                 watchlist.innerHTML += movieHtml
             })
     })
+}
+
+function removeFromWatchList(movieToBeRemoved) {
+    let movieIndex = watchlistFromLS.indexOf(movieToBeRemoved)
+    if (movieIndex !== -1) {
+        watchlistFromLS.splice(movieIndex, 1)
+        localStorage.setItem("myWatchList", JSON.stringify(watchlistFromLS))
+    }
+    renderWatchList()
 }
 
 function renderWatchList() {
