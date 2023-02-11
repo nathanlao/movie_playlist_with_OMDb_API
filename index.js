@@ -22,6 +22,17 @@ function searchByMovieTitle(event) {
 
             renderMovieLists(movieIdArray)
         })
+        .catch(error => {
+
+            movieLists.innerHTML = `
+                <section class="search-error-container">
+                    <img alt="video img" src="./images/video.png"/>
+                    <p class="search-error">
+                        Oops! Unable to find what you are looking for :D
+                    </p>
+                </section>
+            `
+        })
 }
 
 function renderMovieLists(movieIdArray) {
