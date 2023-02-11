@@ -10,7 +10,7 @@ body {
 }
 
 body {
-    border: 1px solid lightgray;
+    background-color: #f8f9fa;
     width: 700px;
     /* min height stretch to full viewport */
     min-height: 100vh;
@@ -49,6 +49,7 @@ body {
 .header-watchlist {
     font-size: 14px;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .search {
@@ -128,6 +129,9 @@ body {
 }
 
 .movie-list {
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -232,7 +236,40 @@ body {
     color: #6c757d;
 }
 
+/* watchlist */
+
+.empty-watchlist {
+    margin: 200px auto;
+    text-align: center;
+}
+
+.empty-msg {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    color: #dee2e6;
+}
+
+.add-some-movies {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-some-movies i,
+.add-some-movies p {
+    display: inline-block;
+    color: #212529;
+}
+
+.add-some-movies p {
+    margin-left: 5px;
+}
+
 /* Ulitity */
 .flex {
     display: flex;
+}
+
+.disabled {
+    cursor: not-allowed;
 }
