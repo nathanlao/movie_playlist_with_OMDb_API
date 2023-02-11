@@ -233,6 +233,35 @@ body {
     color: #6c757d;
 }
 
+/* watchlist */
+
+.empty-watchlist {
+    margin: 200px auto;
+    text-align: center;
+}
+
+.empty-msg {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    color: #dee2e6;
+}
+
+.add-some-movies {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-some-movies i,
+.add-some-movies p {
+    display: inline-block;
+    color: #212529;
+}
+
+.add-some-movies p {
+    margin-left: 5px;
+}
+
 /* Ulitity */
 .flex {
     display: flex;
