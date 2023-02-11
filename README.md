@@ -1,5 +1,5 @@
 # Cinema Craze
-This web app allows user to search movie title, get a sneak peak info about the movie and be able to add/remove their favourite movies to/from playlist.
+This web app allows user to search movies by typing the title, get a sneak peak info about the movie and be able to add/remove their favourite movies to/from playlist.
 
 ### Overview
 
