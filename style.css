@@ -110,6 +110,23 @@ body {
 
 /* main */
 
+.search-error-container {
+    margin: 200px auto;
+    max-width: 420px;
+}
+
+.search-error-container img {
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.search-error {
+    font-weight: 700;
+    font-size: 18px;
+    color: #212529;
+}
+
 .movie-list {
     min-height: 100vh;
     display: flex;
