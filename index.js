@@ -2,6 +2,8 @@ const submitForm = document.getElementById("search-form")
 const searchInputEl = document.getElementById("search-input")
 const movieLists = document.getElementById("movie-list")
 
+let movieWatchList = []
+
 submitForm.addEventListener("submit", searchByMovieTitle)
 
 function searchByMovieTitle(event) {
@@ -65,7 +67,10 @@ function renderMovieLists(movieIdArray) {
                             <section class="movie-details flex">
                                 <p>${data.Runtime}</p>
                                 <p>${data.Genre}</p>
-                                <button class="add-watchlist">
+                                <button 
+                                    class="add-watchlist"
+                                    onclick="addToWatchList('${data.imdbID}')"
+                                >
                                     <i class="fa-solid fa-circle-plus"></i>
                                     Watchlist
                                 </button>
@@ -78,3 +83,15 @@ function renderMovieLists(movieIdArray) {
             })
     })
 }
+
+function addToWatchList(movieId) {
+    // push to array if movid is not exist in the array
+    if (!movieWatchList.includes(movieId)) {
+        movieWatchList.push(movieId)
+    }
+    
+    localStorage.setItem("myWatchList", JSON.stringify(movieWatchList))
+    console.log(movieWatchList)
+}
+
+// localStorage.clear()
