@@ -104,6 +104,10 @@ body {
     border-bottom-left-radius: 0;
 }
 
+.search-btn:hover {
+    background-color: #dee2e6;
+}
+
 /* main */
 
 .movie-list {
