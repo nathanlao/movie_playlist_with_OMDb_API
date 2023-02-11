@@ -53,6 +53,10 @@ body {
     text-decoration: none;
 }
 
+.header-watchlist:hover {
+    color:#FEC654;
+}
+
 .search {
     display: flex;
     justify-content: center;
