@@ -2,7 +2,7 @@ const submitForm = document.getElementById("search-form")
 const searchInputEl = document.getElementById("search-input")
 const movieLists = document.getElementById("movie-list")
 
-let movieWatchList = []
+let movieWatchList = JSON.parse(localStorage.getItem("myWatchList")) || []
 
 submitForm.addEventListener("submit", searchByMovieTitle)
 
@@ -39,13 +39,16 @@ function searchByMovieTitle(event) {
 
 function renderMovieLists(movieIdArray) {
     movieLists.innerHTML = ""
+
     // Fetch movie according to each movie imdbID
     movieIdArray.forEach(movieId => {
         fetch(`http://www.omdbapi.com/?apikey=464807e&i=${movieId}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
-    
+
+                // Check if movieId is aleady in LS
+                const inWatchList = movieWatchList.includes(data.imdbID)
+                
                 let movieHtml = ""
                 movieHtml += `
                     <div class="movie">
@@ -68,11 +71,14 @@ function renderMovieLists(movieIdArray) {
                                 <p>${data.Runtime}</p>
                                 <p>${data.Genre}</p>
                                 <button 
-                                    class="add-watchlist"
+                                    class="add-watchlist ${inWatchList ? "disabled" : ""}"
                                     id="add-${data.imdbID}"
                                     onclick="addToWatchList('${data.imdbID}')"
-                                >
-                                    <i class="fa-solid fa-circle-plus"></i>
+                                >   
+                                    ${inWatchList ?
+                                        `<i class="fa-solid fa-check"></i>` :
+                                        `<i class="fa-solid fa-circle-plus"></i>`
+                                    }
                                     Watchlist
                                 </button>
                             </section>
@@ -89,18 +95,16 @@ function addToWatchList(movieId) {
     // push to array if movid is not exist in the array
     if (!movieWatchList.includes(movieId)) {
         movieWatchList.push(movieId)
-    }
+    } 
     
     localStorage.setItem("myWatchList", JSON.stringify(movieWatchList))
-    console.log(movieWatchList)
 
     // Change the icon if button is clicked
     const movieBtnEl = document.getElementById(`add-${movieId}`)
     movieBtnEl.innerHTML = `
-            <i class="fa-solid fa-check"></i>
-            watchlist
-        `
-
+        <i class="fa-solid fa-check"></i>
+        Watchlist
+    `
 }
 
 // localStorage.clear()
