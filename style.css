@@ -108,7 +108,6 @@ body {
 
 .movie-list {
     min-height: 100vh;
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -125,14 +124,15 @@ body {
 }
 
 .movie {
-    border-bottom: 1px solid  #ced4da;
+    box-shadow: 10px 5px 5px #adb5bd;
+    border: 1px solid  #212529;
     /* min width to stretch flex childern to full width of containter */
     /* min-width: 600px; */
     padding-bottom: 21px;
     margin: 21px 80px 0;
     display: flex;
     align-items: center;
-    gap: 20px;
+    /* gap: 20px; */
 }
 
 .movie:nth-of-type(1) {
@@ -146,12 +146,8 @@ body {
 
 .movie-content-wrapper {
     min-width: 414px;
+    padding: 15px;
 }
-
-/* .movie-header {
-    align-items: flex-start;
-    justify-content: space-between;
-} */
 
 .movie-title {
     font-weight: 500;
