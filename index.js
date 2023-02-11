@@ -126,9 +126,9 @@ function renderMovieLists(movieIdArray) {
                                     <h4 class="movie-rating">${data.imdbRating}</h4>
                                 </div>
                             </header>
-                            <section class="flex">
-                                <h4>${data.Runtime}</h4>
-                                <h4>${data.Genre}</h4>
+                            <section class="movie-details flex">
+                                <p>${data.Runtime}</p>
+                                <p>${data.Genre}</p>
                             </section>
                             <p>${data.Plot}</p>
                         </div>
