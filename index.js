@@ -1,86 +1,11 @@
-/**
- * Actors
-: 
-"Harrison Ford, Rutger Hauer, Sean Young"
-Awards
-: 
-"Nominated for 2 Oscars. 13 wins & 19 nominations total"
-BoxOffice
-: 
-"$32,914,489"
-Country
-: 
-"United States"
-DVD
-: 
-"30 Oct 2001"
-Director
-: 
-"Ridley Scott"
-Genre
-: 
-"Action, Drama, Sci-Fi"
-Language
-: 
-"English, German, Cantonese, Japanese, Hungarian, Arabic, Korean"
-Metascore
-: 
-"84"
-Plot
-: 
-"A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator."
-Poster
-: 
-"https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
-Production
-: 
-"N/A"
-Rated
-: 
-"R"
-Ratings
-: 
-(3) [{…}, {…}, {…}]
-Released
-: 
-"25 Jun 1982"
-Response
-: 
-"True"
-Runtime
-: 
-"117 min"
-Title
-: 
-"Blade Runner"
-Type
-: 
-"movie"
-Website
-: 
-"N/A"
-Writer
-: 
-"Hampton Fancher, David Webb Peoples, Philip K. Dick"
-Year
-: 
-"1982"
-imdbID
-: 
-"tt0083658"
-imdbRating
-: 
-"8.1"
-imdbVotes
-: 
-"775,925"
- */
 const submitForm = document.getElementById("search-form")
 const searchInputEl = document.getElementById("search-input")
 const movieLists = document.getElementById("movie-list")
 
-submitForm.addEventListener("submit", (e) => {
-    e.preventDefault()
+submitForm.addEventListener("submit", searchByMovieTitle)
+
+function searchByMovieTitle(event) {
+    event.preventDefault()
 
     const movieTitle = searchInputEl.value
 
@@ -97,7 +22,7 @@ submitForm.addEventListener("submit", (e) => {
 
             renderMovieLists(movieIdArray)
         })
-})
+}
 
 function renderMovieLists(movieIdArray) {
     movieLists.innerHTML = ""
