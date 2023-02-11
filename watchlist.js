@@ -38,8 +38,8 @@ function renderMovieLists(movieIdArray) {
                                     id="add-${data.imdbID}"
                                     onclick="addToWatchList('${data.imdbID}')"
                                 >
-                                    <i class="fa-solid fa-circle-plus"></i>
-                                    Watchlist
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                    Remove
                                 </button>
                             </section>
                             <p class="movie-plot">${data.Plot}</p>
