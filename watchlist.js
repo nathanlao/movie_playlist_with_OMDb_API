@@ -60,9 +60,23 @@ function removeFromWatchList(movieToBeRemoved) {
     renderWatchList()
 }
 
+function renderEmptyMsg() {
+    watchlist.innerHTML = `
+        <section class="empty-watchlist">
+            <p class="empty-msg">Your watchlist is looking little empty...</p>
+            <a href="index.html" class="add-some-movies">
+                <i class="fa-solid fa-circle-plus"></i>
+                <p>Let's add some movies!</p>
+            </a>
+        </section>
+    `
+}
+
 function renderWatchList() {
-    if (watchlistFromLS){
+    if (watchlistFromLS.length !== 0){
         renderMovieLists(watchlistFromLS)
+    } else {
+        renderEmptyMsg()
     }
 }
 
